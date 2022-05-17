@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0;padding: 0;}
+        .box{
+            width: 100px;height: 100px;
+            background-color: aqua;
+
+            /* margin-left:auto;margin-right:auto -> 가운데에 위치(block단위일 경우) */
+            /* margin-left:auto -> 가지고 있는 margin값을 다 쓰는 것 */
+            /* padding은 안쪽 여백=box가 색칠된 영역에서 얼마나 떨어지는지
+            margin은 바깥쪽 여백=색칠된 영역이 전체 사이트에서 얼마나 떨어지는지 */
+
+            
+        }
+
+        /* <우선순위> -> *(전체선택자) < tag(1점) < class(10점) < id(100점) < inline style < ? */
+
+        .link{margin-left:auto;margin-right:auto;background-color: #f00;
+            width: 100px;display:block}
+
+        /* inline태그일때는 width, height값을 주어도 변화없음 */
+        /* 안쪽에 있는 자료에 따라 커졌다 작아졌다 하는 것 */
+        /* 따라서 block단위로 만들어주기 위해 display:block 사용해주어야 함 */
+        /* ★★★blcok단위일때 가운데로 옮길 수 있다★★★ */
+
+        .header{
+            width: 1200px;height: 100px;
+            background-color: aqua;
+            margin: 10px auto;
+        }
+
+        .visualWrap{
+            width: 100%;
+            background-color: skyblue;
+            margin: 0 auto;
+            background-image: url(images/mainbg.png);
+            padding:20px 0
+        }
+
+        /* div.visual{} -> tag
+        .visual{} -> class
+        둘의 우선순위가 다르다 */
+
+        /* 부모 > 자식 */
+        .visualWrap > .visual{
+            background-color: #00f;
+            width: 1200px;height: 400px;
+            margin: 0 auto;
+
+        }
+
+        .section{
+            width: 1200px;
+            height: 200px;
+            background-color: green;
+            margin:0 auto;
+        }
+
+    </style>
+
+
+</head>
+<body>
+    <!-- .box 치고 tab누르기 -->
+    <!-- <div class="box"></div> -->
+
+    <!-- #box 치고 tab 누르기 -->
+    <!-- <div id="box"></div> -->
+
+    <!-- div태그는 골격만 만드는 역할 -->
+
+    <div class="box">box</div>
+
+    <!-- inline 단위 태그의 경우 -->
+    <a href="#" class="link">네이버</a>
+
+    <div class="header"></div>
+
+    <div class="visualWrap">
+        <div class="visual"></div>
+    </div>
+
+    <div class="section"></div>
+
+</body>
+</html>
+
+<!-- ★사이트의 폭 = width 값부터 설정★ -->

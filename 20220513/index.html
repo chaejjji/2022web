@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* initial reset */
+        *{margin:0;padding:0}
+
+
+        *{color:darkblue}
+
+        div{color:blue}
+        div.han1{color:green}
+        #han{color:skyblue}
+
+        .han1{color:black}
+        .tred{color:red;}
+        .tred.tbold{font-weight:bold}
+
+        div.box{width:100px;height:100px;background-color:#ff0000;
+                /* margin-left: auto;
+                margin-right:auto; */
+
+                /* 12부터 시계방향으로 4값 쓰면 = 축약형 */
+                margin:0 auto;
+
+                }
+        /* 레이아웃 잡기의 기본 */
+        div.box1{width:100%;height:100px;
+                background-color: aqua
+        }
+        
+        header#hd{
+            width: 1200px;height: 100px;
+            margin:0 auto;
+            background-color:blue
+        }
+                
+    </style>
+
+  
+
+    <!-- [우선순위] * < tag < class < id < inline style * -->
+
+</head>
+<body>
+    <!-- display:block 요소 -->
+    <!-- parents의 width 크기로 채워지는 것 -->
+    <h1></h1>
+    <ul></ul><li></li>
+    <p></p>
+    <div></div>
+
+    <!-- 새롭게 정착된 태그(참고) -->
+    <header></header>
+    <section></section>
+    <aside></aside>
+    <nav></nav>
+    <footer></footer>
+
+    <!-- display:inline 단위 요소 -->
+    <!-- inline = 같은 라인에 옆에 붙는 것 -->
+    <img src="" alt="">
+    <a href=""></a>
+    <span></span>
+
+    <!-- 줄바꿈 태그 -->
+    <br>
+    <!-- 라인을 만들어주는 태그 - block 요소 -->
+    <hr>
+
+    <!-- 레이아웃 잡을 때 = 환경에 맞춰서 block을 inline으로 inline을 block으로 변경하여 사용 -->
+
+    hanyong5
+    <div id="han" class="han1">
+        han
+    </div>
+    <div class="han1 " style="color:orange">
+        han
+    </div>
+
+    <div>
+        <p>Lorem <span class="tred">ipsum</span>  dolor <span class="tred tbold">sit</span>  amet.</p>
+    </div>
+
+    <div class="box"></div>
+    <div class="box1"></div>
+
+    <header id="hd"></header>
+
+    </body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin:0;padding:0}
+
+        div.header{
+            width: 1200px;height: 100px;
+            background-color: skyblue;
+            margin:0 auto;
+        }
+        /* 헤더의 1차메뉴 */
+
+        div.visual{
+            padding:0;
+            height:810px;
+            background-image: url(images/mainbg.png);
+        }
+        /* 헤더의 2차메뉴 */
+        
+        div.secWrap{
+            background-image: url(images/img1.png);
+            padding:50px 0
+        }
+
+        div.section{
+            width: 1200px;
+            /* height: 300px; */
+            /* background-color: gold; */
+            margin: 0 auto;
+        }
+        /* 바디 부분 */
+
+        div.footer{
+            width: 100%;height: 150px;
+            background-color: gray;
+            
+        }
+        /* 푸터 부분 */
+
+
+        div.visual > div.vMain{
+            width: 1200px;margin: 0 auto;
+            background-color: green;
+            padding:50px 0
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="header"></div>
+
+    <div class="visual">
+        <div class="vMain">
+            Lorem ipsum dolor sit amet.
+        </div>
+    </div>
+
+    <!-- visual에 vMain으로 글자 넣어주기 -->
+    
+    <div class="secWrap">
+        <div class="section">
+            <img src="images/img2.png" alt="">
+        </div>
+    </div>
+    <!-- secWrap으로 section을 감싸주는 것 -->
+
+    <div class="footer"></div>
+
+
+</body>
+</html>

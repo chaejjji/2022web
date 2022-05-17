@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 폰트의 소스를 넣어주기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&family=Nanum+Gothic&display=swap" rel="stylesheet">
+
+    <style>
+        body{font-size:14px;
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        /* 'Nanum Gothic', sans-serif -> 시스템에 나눔 고딕이 없을 경우 sans-serif체로 변경 */
+
+        /* 원래 body 문서 내에는 1em이 16px = body에 아무것도 지정하지 않았을 때 1em은 16px이 기본
+        하지만 14로 지정하면 1em이 14px로 변경된다 */
+        /* 참고: 전체 문서의 대부분은 거의 1em = 14px을 사용 */
+
+        .text{font-size:32px;}
+        .name{font-size:1em;font-family: 'Nanum Brush Script', cursive;}
+        /* 14px로 지정했기 때문에 name인 홍길동은 기본 크기로 출력되는 반갑습니다.와 크기 동일 */
+
+        .boxText1{font-size:2em;
+            background-color: skyblue;
+            padding:2em;
+        }
+        /* padding값을 em이나 px로 지정 -> 본인의 선택 */
+
+    </style>
+
+
+
+</head>
+<body>
+    
+    <span class="text">안녕하세요.</span>
+    <span class="name">홍길동</span>
+    <!-- body 내에서 특정 글자만 크기를 다르게 지정하고 싶을 때는 class 주고 style 지정 -->
+    반갑습니다.
+
+    <div>만나서 반갑습니다.</div>
+    <div class="boxText1">만나서 반갑습니다.</div>
+
+    
+</body>
+</html>

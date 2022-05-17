@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* reset */
+        *{margin: 0;padding: 0;}
+        
+        li{list-style:none}
+        .clearfix:after{content:"";display: block;clear: both;}
+
+        /* header */
+        div.headerWrap{
+            width: 1000px;
+            margin: 0 auto;
+            background-color: skyblue;
+        }
+
+        /* h1 float 부모자인 headerWrap에서 해제 */
+        /* div.headerWrap:after{content:"";display:block;clear:both} */
+
+        /* 참고: > 는 자식 띄어쓰기는 자손 -> 바로 밑이 자식 그 밑이 자손 */
+
+        div.headerWrap>h1{
+            background-color: pink;
+            width: 150px;
+            line-height:100px;
+            text-align:center;
+            float:left;
+            
+        }
+
+        div.headerWrap>nav.navbar{
+            width: 700px;
+            background-color: yellowgreen;
+            float:right;
+        }
+
+        /* div.headerWrap>nav.navbar>ul:after{content:"";display:block;clear:both} */
+
+        /* .navbar li -> 간단하게 부모와 자손 관계로 쓰는 것도 가능 */
+        div.headerWrap>nav.navbar>ul>li{
+            float:left;
+            width: 25%;
+            /* 부모자의 넓이 중 얼만큼 차지할 것인지 정해주는 것 */
+            text-align:center;
+            line-height:100px;
+
+        }
+
+
+        /* visual */
+        .visual{
+            height: 400px;
+            background-color: gold;
+        }
+
+        /* section */
+        .section{
+            width: 1000px;
+            margin: 0 auto;
+            
+        }
+
+        .section>.contents{
+            width: 750px;
+            height: 500px;
+            background-color: gray;
+            float:left;
+        }
+        .section>.aside{
+            width: 240px;
+            height: 500px;
+            float:right;
+            background-color: aqua;
+        }
+
+        /* footer */
+        .footer{
+            background-color: #eee;
+            padding:40px 0
+        }
+        .footer>address{
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+   
+
+    </style>
+
+</head>
+<body>
+
+    <!-- header 태그 존재 -->
+    <!-- <header class="headerWrap">
+        <h1>LOGO</h1> -->
+        <!-- menu는 nav태그 사용(div>ul>li태그 사용도 가능) -->
+        <!-- <nav class="navbar">
+            <ul>
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </nav>
+
+    </header> -->
+
+    <!-- 태그를 사용할 때 같은 결과가 나오는 여러 경우가 있지만,
+    코드를 작성하는 내가 보기 편하게, 수정하기 편하게 작성하는 것이 좋음 -->
+
+    <div class="headerWrap clearfix">
+        <h1>LOGO</h1>
+       
+        <nav class="navbar">
+            <ul class="clearfix">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </nav>
+
+    </div>
+
+    <div class="visual"></div>
+
+    <section class="section clearfix">
+        <div class="contents"></div>
+        <aside class="aside"></aside>
+    </section>
+
+    <footer class="footer">
+        <address>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ab, iure!</address>
+    </footer>
+
+</body>
+</html>

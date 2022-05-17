@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style:none}
+        .clearfix:after{content:"";display:block:clear:both}
+
+        /* header */
+        header.headerWrap{
+            width: 1200px;
+            background-color: skyblue;
+            margin: 0 auto;
+        }
+
+        header.headerWrap>h1{
+            width: 200px;
+            background-color: pink;
+            float:left;
+            line-height:50px;
+            text-align:center;
+        }
+
+        header.headerWrap>nav.navbar>{
+            width: 500px;
+            float:right;
+            background-color: gold;
+        }
+
+        header.headerWrap>nav.navbar>ul>li{
+            float:left;
+            width: 25%;
+            line-height:50px;
+            text-align:center;
+        }
+
+        /* visual */
+        .visual{
+            height: 500px;
+            background-color: yellowgreen;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <header class="headerWrap clearfix">
+        <h1>LOGO</h1>
+
+        <nav class="navbar">
+            <ul class="clearfix">
+                <li>menu1</li>
+                <li>menu2</li>
+                <li>menu3</li>
+                <li>menu4</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="visual"></div>
+    
+</body>
+</html>
