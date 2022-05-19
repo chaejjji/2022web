@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0;padding: 0;}
+        li{list-style:none}
+        .clearfix:after{content:"";display:block;clear:both}
+
+        img{display:block;}
+
+        /* layout */
+        .sec_1st{width: 1400px;margin: 0 auto;background-color: skyblue;}
+        .sec_1st ul>li{float:left;
+            width:calc( (1400px - 60px) / 3);
+            margin-right: 30px;
+        }
+        .sec_1st ul>li>img{width: 100%;}
+        .sec_1st li:last-child{margin-right: 0;}
+
+        .sec_1st h2{margin-bottom: 40px;text-align:center}
+        .bgcolor{background-color: gold;padding:30px 0;}
+
+        
+    </style>
+</head>
+
+
+<body>
+
+    <!-- LAYOUT잡기 복습 -->
+    <div class="bgcolor">
+        <section class="sec_1st">
+            <div class="content">
+                <h2>GALLERY</h2>
+                <ul class="clearfix">
+                    <li><img src="../images/testimg.jpg" alt=""></li>
+                    <li><img src="../images/testimg.jpg" alt=""></li>
+                    <li><img src="../images/testimg.jpg" alt=""></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    
+</body>
+</html>
