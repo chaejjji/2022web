@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+
+
+    <style>
+        *{margin: 0;padding: 0;box-sizing:border-box;}
+        li{list-style:none}
+        .clearfix:after{content:"";display:block;clear:both;}
+        img{display:block;}
+
+        a:link,a:visited{color:#333;text-decoration:none;}
+
+        /* header */
+        #headerWrap{width: 1000px;height: 150px;margin: 0 auto;background-color: skyblue;
+            padding:20px;position:relative;
+        }
+
+        #headerWrap h1{background-color: white;height: 110px;width: 150px;}
+        #headerWrap h1 a{display:block;text-align:center;line-height:110px;}
+        #headerWrap .util{position:absolute;right:20px;top:20px}
+        #headerWrap .navbar{position:absolute;right:20px;bottom:20px}
+        /* 문서 내에 하나밖에 없으면 .util .navbar로만 적어도 가능 */
+
+        .navbar>ul{}
+        .navbar>ul>li{float:left;}
+        .navbar>ul>li>a{display:block;padding: 10px 20px;font-size:18px;}
+
+        /* hover했을 때 블럭 단위로 색깔변경되게 하는 방법 2가지(li태그에 hover 혹은 a태그에 hover) */
+        /* .navbar>ul>li:hover{background-color: #f00;color:white} */
+        /* .navbar>ul>li:hover a{color:white} */
+
+        .navbar>ul>li>a:hover{background-color: #00f;color:white}
+        /* .navbar>ul>li>a태그에만 hover값 주기  */
+        /* hover는 자식 요소에만 적용 가능(css에서) */
+
+        .util>ul>li{float:left;}
+        .util>ul>li>a{display: block;padding: 10px 10;font-size: 18px;}
+
+        /* visual */
+        .visual{background-color: #ff0;}
+        .visual img{margin: 0 auto;width: 100%;}
+        /* txtWrap의 스타일을 넣어줄때
+        슬라이드와 버튼 스타일 수정할 때 검사에서 .bx-wrapper 소스 가져다 썼기 때문에
+        .visual>ul> 이렇게 자식 관계로 쓰면 안됨 -> 자손 관계로 써주기 */
+        .visual .txtWrap{position:absolute;
+            left:calc( 50% - 479px );top:200px
+        }
+        .visual .txtWrap h2{margin-bottom: 10px;}
+        .visual .txtWrap p{margin-bottom: 30px;}
+        /* txtWrap에서 글씨 사이와 글씨와 버튼 사이 간격 띄어주기 */
+
+        .visual .txtWrap .btn{display:inline-block;
+            padding:10px 40px;
+            /* background-color: #fff; */
+            border-radius:21px;
+            border: 1px solid #fff;
+            color:white;
+
+            transiton:0.3s;
+            /* 가비아 글로벌 사이트에 버튼에 있는 transition 애니메이션 효과 넣기 */
+        }
+
+        .visual .txtWrap .btn:hover{background-color: #fff;color:black}
+        /* button에 hover 넣어주기 */
+
+
+        /* bxslider <- 이미지, jquery, bxslider.js, bxslider.css가져오기 */
+        .bx-wrapper{
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: 0 solid #fff;
+
+            margin-bottom: 0;
+            /* section 넣어줬을 때 visual과 section이 떨어진 부분 없애기 - 검사에서 확인해서 수정 */
+        }
+        /* slide 부분에서 겉에 테두리 없애기 - 검사에서 소스 복사해서 0으로 변경 */
+
+        .bx-wrapper .bx-pager{
+            bottom: 30px;
+        }
+        /* slide 버튼 사진 위로 올리기 - 검사에서 소스 복사해서 필요한 부분만 남기기
+        회색으로 적힌 부분은 관련 없는 부분 의미, 지워도 ok */
+
+        .section{height: 300px;background-color: pink;}
+
+
+
+        
+    </style>
+
+    <script>
+        $(document).ready(function(){
+            $(".slide").bxSlider()
+            
+        })
+
+    </script>
+</head>
+<body>
+
+    <header id="headerWrap">
+        <h1><a href="#">LOGO</a></h1>
+        <div class="util">
+            <ul class="clearfix">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">MY PAGE</a></li>
+                <li><a href="#">SITE MAP</a></li>
+            </ul>
+        </div>
+        <nav class="navbar">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="visual">
+        <ul class="slide">
+            <li>
+                <!-- visual 사진 위에 글자 넣기 -->
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.1</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, voluptatibus?</p>
+
+                    <a href="#" class="btn">more</a>
+                </div>
+                <!-- 전체가 슬라이드 되면서 같이 움직이기 때문에 txtWrap으로 묶어줌 -->
+
+                <img src="../images/pc01.jpg" alt="">
+            </li>
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.2</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, voluptatibus?</p>
+
+                    <a href="#" class="btn">more</a>
+                </div>
+
+                <img src="../images/pc02.jpg" alt="">
+            </li>
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor.3</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A, voluptatibus?</p>
+
+                    <a href="#" class="btn">more</a>
+                </div>
+
+                <img src="../images/pc03.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <div class="section"></div>
+
+   
+</body>
+</html>
+
+<!-- *line border-top이나 border-bottom으로 넣어보기* -->
