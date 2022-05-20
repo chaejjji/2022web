@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{margin: 0;padding: 0;box-sizing:border-box;}
+        li{list-style:none}
+        .cleafix:after{content:"";display:block;clear:both;}
+
+        .boxWrap{background-color: skyblue;width: 1000px;height: 200px;
+            position:relative;margin: 0 auto;
+        }
+
+        .box1{background-color: gold;width: 280px;height: 160px;
+            position:absolute;left:20px;top:20px;
+            text-align:center;line-height:160px;font-size:30px;
+        }
+
+        .box2{background-color: pink;width: 250px;height: 30px;;
+            position:absolute;top:20px;right:20px;
+        }
+
+        .box3{background-color: pink;width: 600px;height: 50px;
+            position:absolute;bottom:20px;right:20px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="boxWrap">
+        <div class="box1">logo</div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>    
+    
+</body>
+</html>

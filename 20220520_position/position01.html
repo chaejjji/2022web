@@ -1,0 +1,50 @@
+<!-- position 개념연습 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    *{margin: 0;padding: 0;box-sizing:border-box;}
+    li{list-style:none}
+    .clearfix:after{content:"";display:block;clear:both}
+
+    .boxWrap{width: 500px;height: 500px;background-color: skyblue;
+        position:relative;margin: 0 auto;
+        /* position:relative는 margin:0 auto 가능 absolute는 불가능 */
+    }
+    .boxWrap div{width: 100px;height: 100px;}
+
+    /* 자식이 positon이 있으면 부모자도 position 넣어줘야 함
+    (그렇지 않으면 body를 부모자로 인식하여 고정되지 않음)*/
+
+    .box1{background-color: red;
+        position:absolute;top:-50px;right:-100px;
+    }
+
+    .box2{background-color: #000;
+        position:absolute;
+        /* margin:0 auto 사용하지 않고 가운데에 놓는 방법은 2가지(left/margin-left이용 또는 left:calc()이용) */
+        /* left:50%;margin-left:-50px;
+        top:50%;margin-top:-50px; */
+        /* 부모의 크기의 50% */
+        left:calc( 50% - 50px );
+        top:calc( 50% - 50px );
+        color:white;text-align:center;line-height:100px;
+        /* text를 가운데에 놓는 방법 */
+        border-radius:50%;
+    }
+
+</style>
+
+<body>
+    <div class="boxWrap">
+        <div class="box1"></div>
+        <div class="box2">1</div>
+    </div>
+</body>
+</html>
