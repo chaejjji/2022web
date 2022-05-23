@@ -1,0 +1,62 @@
+<!-- 복습 -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <!-- reset부분을 css로 묶어서 넣어주기 -->
+<style>
+
+    /* header */
+    /* .headerWrap{background-color: #000;}
+    .header{width: 1000px;background-color: skyblue;
+        margin: 0 auto;padding:10px 0;
+        position: relative;
+    }
+
+    .navbar{position: absolute;top: 10px;right: 10px;} */
+    /* header에 padding값 10px로 넣어줬기 때문 */
+
+    /* .navbar ul{width: 600px;background-color: darkgray;}
+    .navbar li{float:left;height: 43px;width: 20%;}
+    .navbar li a{display:block;line-height:43px;text-align:center;} */
+    /* LOGO의 높이값과 맞춰주기 위해 검사에서 보고 43px 넣어줌 */
+
+
+    .header{width: 1000px;margin: 0 auto;padding:10px 0;background-color: skyblue;
+        position: relative;height: 120px;
+    }
+    .header h1{width: 400px;margin: 0 auto;text-align:center;background-color: #fff;}
+    /* text-align:center써도 센터로(a태그는 LOGO부분에만 적용되기 때문)
+    또는 width값을 주고 margin 0 auto; 써주기 */
+
+    .navbar{position: absolute;background-color: darkgray;width: 100%;bottom: 0;}
+    /* 자식에 position:absolute사용했으면 부모에게는 position:relative 사용 */
+
+    .navbar ul{}
+    .navbar ul li{float:left;width: 20%;}
+    .navbar ul li a{display:block;line-height:40px;text-align:center;}
+
+</style>
+
+</head>
+
+<body>
+        <header class="header">
+            <h1><a href="#">LOGO</a></h1>
+            <nav class="navbar">
+                <ul class="clearfix">
+                    <li><a href="#">menu1</a></li>
+                    <li><a href="#">menu2</a></li>
+                    <li><a href="#">menu3</a></li>
+                    <li><a href="#">menu4</a></li>
+                    <li><a href="#">menu5</a></li>
+                </ul>
+            </nav>
+        </header>
+</body>
+</html>

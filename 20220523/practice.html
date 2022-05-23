@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/jquery.bxslider.css">
+    <script src="../js/jquery-3.1.1.min.js"></script>
+    <script src="../js/jquery.bxslider.js"></script>
+
+    <style>
+        /* header */
+        .headerWrap{width: 1000px;margin: 0 auto;background-color: skyblue;
+            padding:20px 0;position: relative;height: 130px;
+        }
+        .headerWrap h1{margin: 0 auto;text-align:center;background-color: pink;width: 300px;}
+        .navbar{width: 100%;background-color:darkgray;
+            position:absolute;bottom: 0;
+        }
+        .navbar li{float:left;width: 20%;}
+        .navbar li a{display:block;text-align:center;line-height:43px;}
+
+        /* visual */
+        .visual{position:relative;}
+        .visual img{margin: 0 auto;width: 100%;}
+        .visual .txtWrap{position: absolute;top: 150px;left:calc(50% - 479px)}
+        .visual .txtWrap h2{margin-bottom: 15px;}
+        .visual .txtWrap p{margin-bottom: 30px;}
+
+        .visual .txtWrap .btn{display:inline-block;color:white;
+            border: 1px solid #fff;padding:10px 30px;border-radius:20px;transition:0.3s
+        }
+        .visual .txtWrap .btn:hover{color:#000;background-color: #fff;}
+
+        .bx-wrapper {
+            -moz-box-shadow: 0 0 0 #ccc;
+            -webkit-box-shadow: 0 0 0 #ccc;
+            box-shadow: 0 0 0 #ccc;
+            border: 0 solid #fff;
+            background: #fff;
+            margin-bottom: 0;
+        }
+        .bx-wrapper .bx-pager{
+            bottom: 20px;
+        }
+
+        /* section */
+        .section{height: 200px;background-color: gold;}
+
+
+    </style>
+    <script>
+        $(document).ready(function(){
+            $(".slide").bxSlider();
+        })
+    </script>
+</head>
+
+
+<body>
+
+    <header class="headerWrap">
+        <h1><a href="#">LOGO</a></h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="visual">
+        <ul class="slide">
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor1.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, doloremque!</p>
+                    <a href="#" class="btn">MORE</a>
+                </div>
+                <img src="../images/pc01.jpg" alt="">
+            </li>
+
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor2.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, doloremque!</p>
+                    <a href="#" class="btn">MORE</a>
+                </div>
+                <img src="../images/pc02.jpg" alt="">
+            </li>
+
+            <li>
+                <div class="txtWrap">
+                    <h2>Lorem, ipsum dolor3.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi, doloremque!</p>
+                    <a href="#" class="btn">MORE</a>
+                </div>
+                <img src="../images/pc03.jpg" alt="">
+            </li>
+        </ul>
+    </div>
+
+    <div class="section"></div>
+</body>
+</html>
