@@ -13,7 +13,7 @@
 
     <style>
         /* header */
-        .headerWrap{width: 1000px;margin: 0 auto;background-color: skyblue;
+        .headerWrap{width: 1400px;margin: 0 auto;background-color: skyblue;
             padding:20px 0;position: relative;height: 130px;
         }
         .headerWrap h1{margin: 0 auto;text-align:center;background-color: pink;width: 300px;}
@@ -24,7 +24,7 @@
         .navbar li a{display:block;text-align:center;line-height:43px;}
 
         /* visual */
-        .visual{position:relative;}
+        .visual{position:relative;margin-bottom: 120px;}
         .visual img{margin: 0 auto;width: 100%;}
         .visual .txtWrap{position: absolute;top: 150px;left:calc(50% - 479px)}
         .visual .txtWrap h2{margin-bottom: 15px;}
@@ -48,10 +48,61 @@
         }
 
         /* section */
-        .section{height: 200px;background-color: gold;}
+        .secWrap{width: 1400px;margin: 0 auto;margin-bottom: 120px;}
+        .section{margin: 0;auto}
+        .section li{float:left;margin-right: 69px;}
+        .section li img{width: 100%;width: 281px; height: 151px;margin-bottom: 10px;}
+
+        .section li:last-child{margin-right: 0;}
+        .section li .btnWrap{float:left;display:block;margin-bottom: 10px;width: 282px;}
+        .section li .btnWrap .btn1{display:inline-block;width: 48px;line-height: 27px;font-size:13px;
+            text-align:center;color:#777;text-align:center;background-color: #fff;
+            border: 1px solid #ddd; border-radius: 5px;
+        }
+        .section li .btnWrap .btn2{display:inline-block;width: 37px;line-height: 27px;font-size:13px;
+            text-align:center;color:#777;text-align:center;background-color: #fff;
+            border: 1px solid #ddd; border-radius: 5px;
+        }
+
+        .section li .txtWrap{}
+        .section li .txtWrap h2{font-size:16px;color:#333;margin-bottom: 20px;}
+        .section li .txtWrap h3{font-size:14px;color:#aaa}
+
+        .secWrap h4{font-size:40px;margin-bottom: 40px;}
+
+        /* footer */
+
+        .footerWrap{width: 100%;background-color: #e6e6e6;position:relative;}
+        .footerWrap .footer{width: 1400px;margin: 0 auto;background-color: #e6e6e6;
+            padding:70px 0;
+        }
+        .footerWrap .txtWrap{width: 450px;height: 186px;}
+        .txt{margin-bottom: 40px;}
+        .txt h2{font-size:20px;color:#333;}
+        .txt p{font-size:20px;color:#333;}
+        .txt h3{font-size:32px;color:#333;}
+        .footer .btn{display:inline-block;color:#fff;background-color: #333;
+            width: 168px;line-height: 48px;font-size:15px;text-align:center;
+            border: 1px solid #333;border-radius:84px
+        }
+
+        .footerWrap .linkWrap{width: 700px;position:absolute;top: 70px;right:0}
+        .footerWrap .linkItem{float:left;margin-right: 103.333px;}
+        .footerWrap .linkItem:last-child{float:left;margin-right:0;}
+        .footerWrap .linkItem h3{font-size:15px; margin-bottom: 20px;}
+        .footerWrap .linkItem ul>li{font-size:13px;color:#333}
+        .footerWrap .linkItem ul>li>a{display:block;margin-bottom: 5px;}
+
+        .footerWrap .linkItem ul>li>a:hover{text-decoration:underline;}
+
+
+
+
+
 
 
     </style>
+
     <script>
         $(document).ready(function(){
             $(".slide").bxSlider();
@@ -105,7 +156,108 @@
             </li>
         </ul>
     </div>
+    <section class="secWrap">
+        <h4>가비아 글로벌의 새소식</h4>
+        <ul class="section clearfix">
+            <li class="clearfix">
+                <img src="../images/gabia global_sec1.jpeg" alt="">
+                <div class="btnWrap">
+                    <a href="#" class="btn1">새소식</a>
+                    <a href="#" class="btn2">공지</a>
+                </div>
+                <div class="txtWrap">
+                    <h2>소상공인 누구나 완판셀러에 도전하세요!</h2>
+                    <h3>2022.04.25</h3>
+                </div>
+            </li>
 
-    <div class="section"></div>
+            <li class="clearfix">
+                <img src="../images/gabia global_sec2.jpeg" alt="">
+                <div class="btnWrap">
+                    <a href="#" class="btn1">새소식</a>
+                    <a href="#" class="btn2">공지</a>
+                </div>
+                <div class="txtWrap">
+                    <h2>소상공인 누구나 완판셀러에 도전하세요!</h2>
+                    <h3>2022.04.25</h3>
+                </div>
+            </li>
+
+            <li class="clearfix">
+                <img src="../images/gabia global_sec3.png" alt="">
+                <div class="btnWrap">
+                    <a href="#" class="btn1">새소식</a>
+                    <a href="#" class="btn2">공지</a>
+                </div>
+                <div class="txtWrap">
+                    <h2>소상공인 누구나 완판셀러에 도전하세요!</h2>
+                    <h3>2022.04.25</h3>
+                </div>
+            </li>
+
+            <li class="clearfix">
+                <img src="../images/gabia global_sec4.png" alt="">
+                <div class="btnWrap">
+                    <a href="#" class="btn1">새소식</a>
+                    <a href="#" class="btn2">공지</a>
+                </div>
+                <div class="txtWrap">
+                    <h2>소상공인 누구나 완판셀러에 도전하세요!</h2>
+                    <h3>2022.04.25</h3>
+                </div>
+            </li>
+
+        </ul>
+    </section>
+
+    <footer class="footerWrap">
+        <div class="footer">
+            <div class="txtWrap">
+                <div class="txt">
+                    <h2>500여개 업체,</h2>
+                    <p>3,000종 이상의 제품을 수출한</p>
+                    <h3>가비아 글로벌과 함께하세요.</h3>
+                </div>
+                <a href="#" class="btn">상담하기</a>
+            </div>
+    
+            <div class="linkWrap clearfix">
+                <div class="linkItem">
+                    <h3>Sitemap</h3>
+                    <ul>
+                        <li><a href="#">아마존 입점</a></li>
+                        <li><a href="#">알리바바 입점</a></li>
+                        <li><a href="#">쇼핑몰 제작</a></li>
+                        <li><a href="#">국내몰 운영</a></li>
+                        <li><a href="#">새소식</a></li>
+                    </ul>
+                </div>
+                <div class="linkItem">
+                    <h3>Family site</h3>
+                    <ul>
+                        <li><a href="#">가비아CNS</a></li>
+                        <li><a href="#">퍼스트몰</a></li>
+                        <li><a href="#">이셀러스</a></li>
+                        <li><a href="#">다이애드</a></li>
+                        <li><a href="#">마젠토코리아</a></li>
+                        <li><a href="#">가비아 홈페이지</a></li>
+                        <li><a href="#">클릭엔</a></li>
+                    </ul>
+                </div>
+
+                <div class="linkItem">
+                    <h3>SNS</h3>
+                    <div class="linkIcon">
+                        <ul class="clearfix">
+                            <li><a href="#"><img src="../images/gabia footer_1.png" alt=""></a></li>
+                            <li><a href="#"><img src="../images/gabia footer_2.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+    
+            </div>
+        </div>
+    </footer>
 </body>
+
 </html>
