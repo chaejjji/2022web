@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+.navWrap{background-color: #1D5DA4;}
+.navWrap .nav{width: 980px;margin: 0 auto;}
+.navWrap .nav ul li{float:left;width:calc( 980px / 6 );border-left: 1px solid white;}
+.navWrap .nav ul li:last-child{border-right: 1px solid white;}
+.navWrap .nav ul li a{display:block;color:#fff;height: 45px;
+    text-align:center;line-height:45px;
+    /* display:flex;justify-content:center;align-items:center; */
+    /* 자식 요소를 가운데에 놓고 싶을 때 */
+}
+
+.navWrap .nav ul li a:hover{background-color:#000}
+
+/* .boxWrap{width: 500px;height: 500px;background-color: darkgray;position: relative;}
+    .box{width: 100px;height: 100px;background-color: pink; */
+    /* position: absolute;left: 50%;top: 50%;margin-left: -50px;margin-top: -50px; */
+    /* position:absolute;left:calc( 50% - 50px);top:calc( 50% - 50px); */
+    /* position으로 가운데에 위치시키는 2가지 방법 */
+/* } */
+
+
+.boxWrap{width: 500px;height: 500px;background-color: darkgray;
+    display:flex;justify-content:center;align-items:center;
+}
+.box{width: 100px;height: 100px;background-color: pink;
+}
