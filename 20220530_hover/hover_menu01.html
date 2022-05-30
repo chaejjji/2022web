@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20220530_hover</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+        .navbarWrap{background-color: orange;}
+
+        .navbar{width: 1000px;margin: 0 auto;}
+        .navbar li{float:left;width:calc( 100% / 6 );}
+        
+        /* [li에 hover를 넣는 경우] */
+        /* .navbar li:hover{background-color: blue;}
+        .navbar li:hover a{color:white} */
+        /* reset.css에 a를 color:#333으로 지정해놨기 때문에
+        li:hover값에 color를 넣으면 글자의 색이 변하지 않는다.
+        따라서 li:hover가 되었을 때 a{}는 이렇게(=.navbar li a:hover) 써줘야 함! */
+
+        /* [a에 hover를 넣는 경우] */
+        .navbar li a{display: block;line-height:40px;text-align:center;}
+        .navbar li a:hover{background-color: yellowgreen;color:darkblue;text-align:center;transition:0.5s}
+        /* transition은 hover로 변화되는 것(움직이는 대상)에 대한 시간을 주는 것 = 애니메이션의 초기 단계 */
+
+        .visual{height: 300px;background-color: pink;margin-bottom: 20px;}
+
+        .container{width: 1000px;margin: 0 auto;}
+        .sec1 li{float:left;width:calc( ( 100% - 20px * 3 ) / 4 );margin-right: 20px;
+            border-radius:5%;background-color: darkgray;overflow:hidden;
+            /* [border-radius값을 li에 주었을 때] */
+            position: relative;
+        }
+        .sec1 li:last-child{margin-right: 0;}
+        .sec1 li img{width: 100%;
+            /* border-radius:5%; */
+        }
+        /* [border-radius값을 img에 주었을 때] */
+
+        .sec1 li .txt{position: absolute;top: 0;left: 0;
+            background-color:rgba(0,0,255,0.5);color:white;
+
+            width: 100%;height: 100%;
+            /* height:100%를 쓸 수 있는 조건 = 부모자가 height값이 있어야 한다.
+            높이값이 없으면 % 사용 불가능! */
+
+            /* text-align:center;line-height:235px; */
+            /* test(자식)를 가운데에 위치시키기 위해 235px은 img의 크기를 알아봐서
+            매번 크기 알아보기 번거롭기 때문에 (부모에) flex사용! */
+
+            display:flex;justify-content:center;align-items:center;  /* 외워주기 */
+            transition:0.3s;opacity:0;
+            /* display:none은 있다/없다 두 가지밖에 없음 따라서 transition 넣어주기 위해
+            중간값 있는 것 사용해야 함! ->  */
+            cursor:pointer;
+
+        }
+        .sec1 li:hover .txt{opacity:1}
+        /* hover했을 때 글씨가 나와야 되니까 display:none으로 처리를 먼저 한 후 다시 flex걸어주기 */
+        /* 하지만 이 방법은 애니메이션을 넣어줄 수 없음 따라서 display:flex를 먼저 걸어준 후 opacity값 이용 */
+
+        .sec1 h2{text-align:center;margin-bottom: 10px;}
+        .sec1 p{text-align:center;margin-bottom: 20px;}
+
+        .line:after{content:"";display:block;width: 50px;height: 2px;background-color: #000;margin: 0 auto;}
+        /* h2태그에 class이름을 line으로 잡아주면 다른 section에서 style 그대로 사용 가능 */
+        /* 미리 만들어놓고 사용 가능 -> 정해놓고 class 이름 옆에 꽂아넣어주기만 해주면 OK! */
+        .tac{text-align:center !important;}
+        .mb30{margin-bottom: 30px !important;}
+        .mb40{margin-bottom: 40px !important;}
+
+
+        
+
+    </style>
+</head>
+<body>
+
+    <div class="navbarWrap">
+        <nav class="navbar">
+            <ul class="clearfix">
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
+                <li><a href="#">menu4</a></li>
+                <li><a href="#">menu5</a></li>
+                <li><a href="#">menu6</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="visual"></div>
+
+    <div class="container">
+        <section class="sec1">
+            <h2 class="line">GALLERY</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta, sit!</p>
+            <ul class="clearfix">
+                <!-- w1000 gutter:20(으로 잡음) * 3 -->
+                <li>
+                    <div class="txt">test</div>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+                <li>
+                    <div class="txt">test1</div>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+                <li>
+                    <div class="txt">test2</div>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+                <li>
+                    <div class="txt">test3</div>
+                    <img src="../images/testimg.jpg" alt="">
+                </li>
+            </ul>
+        </section>
+
+    </div>    
+</body>
+</html>
