@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+    
+    <style>
+        .container{width: 1000px;margin: 0 auto;}
+        .container.sec1{margin-bottom: 30px;}
+
+        .container.sec1 li{float:left;width:calc( ( 100% - 20px * 3 ) / 4);margin-right: 20px;
+            border-radius:5px;position: relative;overflow:hidden;
+        }
+        /* li에 border-radius값을 주면 자식인 img가 넘쳐 나와서 적용이 안됨 */
+        /* 따라서 overflow:hidden 넣어줘야함 */
+
+        /* border-radius값을 img에 넣는 경우에 li태그에 background-color가 있으면
+        끝에 색이 삐져나옴 */
+        /* ->> 상황에 맞게 선택 필요!! <<- */
+
+        .container.sec1 li:last-child{margin-right: 0;}
+        .container.sec1 li img{width: 100%;transition:0.3s;transform-origin:50% 50%;}
+        /* transform-origin: x축 y축 -> transform의 중심축 변경 */
+        /* .container.sec1 .overlay{position: absolute;left: 0;top: 0;width: 100%;height: 100%;
+            background-color: rgba(169, 169, 169,0.3);
+        } */
+        /* 사진 위에 올리기 */
+        
+        .container.sec1 .overlay a{height: 100%;
+            display:flex;justify-content:center;align-items:center;color:white;
+        }
+
+        .container.sec1 .overlay{position: absolute;left: -200px;top: 0;width: 100%;height: 100%;
+            background-color: rgba(255,0,0,0.3);transition:0.3s;
+            /* left:-100%로 바꿔주고 overflow:hidden 지워주기 */
+        }
+        .container.sec1 li:hover .overlay{left:0;}
+        .container.sec1 li:hover img{transform:scale(1.2);transform-origin:20% 0;transition:0.3s;}
+        /* transform은 중심축이 정가운데 */
+
+        /* .sec2 오-왼 */
+        .container.sec2{margin-bottom: 30px;}
+        .container.sec2 li{float:left;width:calc( ( 100% - 20px * 3) / 4);margin-right: 20px;
+            border-radius:5px;overflow:hidden;position: relative;height: 235px;
+        }
+        .container.sec2 li:last-child{margin-right: 0;}
+
+        .container.sec2 li img{width: 100%;}
+        .container.sec2 .overlay{position: absolute;right: -200px;top: 0;width: 100%;height: 100%;
+            background-color: rgba(0,255,0,0.2);transition:0.3s;
+        }
+        .container.sec2 .overlay a{height: 100%;
+            display:flex;justify-content:center;align-items:center;color:white;
+        }
+
+        .container.sec2 li:hover .overlay{right:0;}
+        .container.sec2 li:hover img{transform:scale(1.3);transition:0.3s;}
+
+        /* sec3 위-아래 */
+        .container.sec3{margin-bottom: 30px;}
+        .container.sec3 li{float:left;width:calc( ( 100% - 20px * 3) / 4 );margin-right: 20px;
+            border-radius:5px;overflow:hidden;position: relative;height: 235px;
+        }
+        .container.sec3 li:last-child{margin-right: 0;}
+        .container.sec3 li img{width: 100%;transition:0.3s;transform-origin:80% 30%;}
+
+        .container.sec3 .overlay{width: 100%;height: 100%;position: absolute;top: -85%;
+            background-color: rgba(0, 0, 139,0.2);transition:0.3s;}
+        .container.sec3 .overlay a{height: 100%;
+            display:flex;justify-content:center;align-items:center;color:white;
+        }
+
+        .container.sec3 li:hover .overlay{top:0;}
+        .container.sec3 li:hover img{transform:scale(1.2);transition:0.3s;}
+        
+        /* sec4 */
+        .container.sec4{margin-bottom: 30px;}
+        .container.sec4 li{float:left;width:calc( ( 100% - 20px * 3 ) / 4);margin-right: 20px;
+            border-radius:5px;overflow:hidden;position:relative;height: 235px;
+        }
+        .container.sec4 li:last-child{margin-right: 0;}
+        
+        .container.sec4 li img{width: 100%;transition:0.3s;transform-origin:25% 55%;}
+
+        .container.sec4 .overlay{position: absolute;bottom:-85%;height: 100%;width: 100%;
+            background-color: rgba(164, 52, 192,0.2);transition:0.3s;
+        }
+        .container.sec4 .overlay a{height: 100%;width: 100%;
+            display:flex;justify-content:center;align-items:center;color:white;
+        }
+
+        .container.sec4 li:hover .overlay{top:0;}
+        .container.sec4 li:hover img{transform:scale(1.5);transition:0.3s;}
+
+
+    </style>
+
+</head>
+<body>
+    <div class="container sec1">
+        <ul class="clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+    <div class="container sec2">
+        <ul class="clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container sec3">
+        <ul class="clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+
+
+    <div class="container sec4">
+        <ul class="clearfix">
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+            <li>
+                <img src="../images/testimg.jpg" alt="">
+                <div class="overlay">
+                    <a href="#">프랑스</a>
+                </div>
+
+            </li>
+        </ul>
+    </div>
+</body>
+</html>
