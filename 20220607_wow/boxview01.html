@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="../css/reset.css">
+
+    <style>
+
+        html, body{height: 100%;}
+        /* box를 center로 놓기 위해 */
+        body{display:flex;justify-content:center;align-items:center;height:100vh;}
+
+        .boxWrap{background-color:pink;width: 400px;height: 400px;
+            display:flex;justify-content:center;
+            align-items:center;
+            /* flex-direction:column; */
+            /* flex-direction:column은 justify-content의 방향을 가로에서 세로로 변경
+            -> 축을 변경시키는 것 */
+            /* flex-direction은 justify-content의 축의 방향을 변경(반응형에서 유용) */
+        }
+
+        .boxWrap div{width: 100px;height: 100px;position: absolute;transition:0.3s;border-radius:20%;}
+        .boxWrap div:nth-child(1){background-color: red;}
+        .boxWrap div:nth-child(2){background-color: blue;}
+
+        .boxWrap div:nth-child(3){background-color: green;
+            transition-delay:0.3s;
+        }
+
+        .boxWrap:hover div:nth-child(1){transform:translate(-100%,50%);transition:0.3s;}
+        .boxWrap:hover div:nth-child(3){transform:translate(100%,-50%);transition:0.3s;}
+
+    </style>
+</head>
+
+<body>
+
+    <div class="boxWrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+    
+</body>
+</html>
