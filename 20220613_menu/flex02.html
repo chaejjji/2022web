@@ -7,30 +7,28 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../css/reset.css">
-    
+
     <style>
-        .navWrap{background-color: #ddd;}
-        .navbar{width: 1000px;margin: 0 auto;padding:10px 0;
+        .navWrap{background-color: darkgray;}
+        .navbar{width: 1000px;margin: 0 auto;padding:20px;
             display:flex;justify-content:space-between;
         }
-        .mMenu{display:flex;width: 400px;background-color: orange;
-            justify-content:space-between;
-        }
-        .mMenu a{background-color: skyblue;height: 100%;
-            display:flex;justify-content:center;align-items:center;
-        }
-        .mMenu li{width:calc( 100% / 5 );}
-        .uMenu{display:flex;width: 200px;justify-content:space-between;}
-        .uMenu li{width:calc( ( 100% - 10px ) / 3 );background-color: gold;}
-        .uMenu a{height: 100%;display:flex;justify-content:center;align-items:center;}
-        /* 글자를 가운데로 */
 
-        /* 반응형 */
+        .mMenu{display:flex;width: 400px;justify-content:space-between;background-color: pink;}
+        .mMenu li{width:calc( 100% / 5 );}
+        .mMenu a{height: 100%;display:flex;justify-content:center;align-items:center;}
+
+        .uMenu{display:flex;width: 300px;justify-content:space-between;}
+        .uMenu li{width:calc( ( 100% - 15px ) / 3 );background-color: #dcd;}
+        .uMenu a{height: 100%;display:flex;justify-content:center;align-items:center;}
+    
         @media screen and (max-width:560px){
-            .navbar{width: 100%;flex-direction:column;align-items:center;height: 300px;}
+            .navbar{width: 100%;flex-direction:column;align-items:center;height: 250px;}
         }
 
     </style>
+
+
 </head>
 <body>
 
@@ -46,9 +44,9 @@
             </ul>
 
             <ul class="uMenu">
-                <li><a href="#">umenu1</a></li>
-                <li><a href="#">umenu2</a></li>
-                <li><a href="#">umenu3</a></li>
+                <li><a href="#">menu1</a></li>
+                <li><a href="#">menu2</a></li>
+                <li><a href="#">menu3</a></li>
             </ul>
         </nav>
     </div>
