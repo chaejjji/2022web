@@ -3,6 +3,9 @@
 /* common */
 html,body{height: 100%;}
 body{font-family: 'Nanum Gothic', sans-serif;background-color: #eee;}
+.w458{width: 458px !important;}
+.w130{width: 130px !important;}
+.w145{width: 145px !important;}
 
 .blind{display:block;position:absolute;left:0;top: -9999px;}
 fieldset{border: 1px solid #dadada;background-color: #fff;
@@ -22,7 +25,8 @@ fieldset{border: 1px solid #dadada;background-color: #fff;
 #content .field .inp-field{width: 350px;height: 49px;
     border: 0 none;font-size:16px;text-indent: 1em;
 }
-#content .field .inp-field:focus{outline:none;}
+#content .field .inp-field:focus,
+#content .field.birth select:focus{outline:none;}
 #content .field .icon{
     display:block;width: 97px;height: 48px;position:absolute;right: 10px;top: 0;
     background-image: url(../images/ico_join3.png);
@@ -33,3 +37,27 @@ fieldset{border: 1px solid #dadada;background-color: #fff;
 #content .field .icon.email{background-position: 0 -47px;}
 #content .field .icon.pass{background-position: 0 -466px;}
 #content .field .icon.pass2{background-position: 0 -515px;}
+
+#content .field.radio{height: 49px;}
+#content .field.radio .btn-label{display: block;width: 212px;height: 31px;
+    position: absolute;border: 1px solid #dcdcdc;background-color: #fff;border-radius: 5px;
+    display: flex;justify-content: center;align-items: center;cursor:pointer;top: 9px;
+}
+#content .field.radio .btn-label.male{left: 15px;}
+#content .field.radio .btn-label.female{right: 15px;}
+#content .field.radio input:nth-child(1):checked ~ label.male{background-color: darkgray;}
+#content .field.radio input:nth-child(2):checked ~ label.female{background-color: darkgray;}
+#content .field.radio input{position: absolute;left: 20px;top: 10px;}
+
+#content .field.birth label{width: 53px;height: 49px;background-color: #f7f7f7;
+    display: flex;justify-content: center;align-items: center;
+    float:left;
+}
+
+#content .field.birth input{float:left;}
+#content .field.birth .wall{float:left;text-indent:-9999px;
+    width: 0;height: 29px;border-right: 1px solid #cdcdcd;margin-top: 10px;
+}
+#content .field.birth select{float:left;width: 110px;height: 29px;
+    border: 0 none;font-size:16px;margin:0 9px;margin-top: 10px;
+}
