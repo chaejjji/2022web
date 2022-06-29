@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #box{background:pink;}
+        div{background: skyblue;}
+        .box{background: red;}
+
+        .num1,.num2{margin-top: 50px;}
+    </style>
+</head>
+
+<body>
+    <div class="num3">3. 3단 for문 작성, 변수에 누적저장하여 각 태그, 아이디, 클래스에 출력</div>
+
+    <div id="box" class="box">1</div>
+    <div>2</div>
+    <div class="box">3</div>
+
+    <div class="num1">1. 3단 for문 작성하여 document출력</div>
+
+    <script>
+        for (var i=1;i<10;i++){
+            // document.write("3 x " + i + " = " + 3 * i +"<br>")
+            document.write(`3 x ${i} = ${3 * i}<br>`)
+        }
+    </script>
+
+    <div class="num2">2. 3단 for문 작성, 변수에 누적저장하여 console.log출력</div>
+
+    <script>
+        let gugudan2 = '';
+        for(var i=1;i<10;i++){
+            gugudan2 += `3 x ${i} = ${3 * i} <br>`;
+            
+        }
+        console.log(gugudan2);
+        
+    </script>
+
+
+
+
+
+<script>
+        let gugudan = '';
+        for(var i=1;i<10;i++){
+           gugudan += `3 x ${i} = ${3 * i}<br>`;
+        }
+        console.log(gugudan);
+
+        // document.getElementById("box").innerHTML = gugudan;
+        // document.getElementsByClassName("box")[1].innerHTML = gugudan;
+        document.getElementsByTagName("div")[1].innerHTML = gugudan;
+    </script>
+
+
+    
+</body>
+</html>
