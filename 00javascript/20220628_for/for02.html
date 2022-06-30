@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .total{width: 100px;height: 100px;
+            display: flex;justify-content: center;align-items: center;
+            background-color: skyblue;}
+    </style>
+</head>
+<body>
+    <div class="total">0</div>
+    <div class="total">1</div>
+    <div class="total">1</div>
+    <div class="total">1</div>
+    <div class="total">1</div>
+    <div class="total">1</div>
+    <script>
+        // let 변수선언, 재선언불가
+        // const 데이타 변경이 불가
+        let sum = 0;
+        for(let i=1;i<=100;i++){
+
+            sum = sum + i;
+            
+        }
+        // document.getElementByTagName("div").innerHTML = sum;
+        // document.getElementsByClassName("total")[0].innerHTML = sum;
+        // document.querySelector(".total").innerHTML = sum;
+        // querySelector -> 첫번째 item에만
+        // querySelector를 사용하여 첫번째 item이 아닌 것에 넣는 방법
+        // document.querySelectorAll("div.total")[1].innerHTML = sum;
+
+        // document.querySelectorAll("div.total")[0].innerHTML = sum;
+        // document.querySelectorAll("div.total")[1].innerHTML = sum;
+        // document.querySelectorAll("div.total")[2].innerHTML = sum;
+        // document.querySelectorAll("div.total")[3].innerHTML = sum;
+        // document.querySelectorAll("div.total")[4].innerHTML = sum;
+        // document.querySelectorAll("div.total")[5].innerHTML = sum;
+
+        // ==> for문으로 돌리기
+        const total = document.querySelectorAll("div.total");
+
+        console.log(total.length)
+
+        for(let i=0;i<6;i++){
+            total[i].innerHTML = sum;
+        }
+    </script>
+</body>
+</html>

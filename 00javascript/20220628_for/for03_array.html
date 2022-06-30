@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box{width: 400px;}
+    </style>
+</head>
+<body>
+
+    <h2>채's 성적</h2>
+    <div>국어 : <span class="kor">0</span>점</div>
+    <div>수학 : <span class="math">0</span>점</div>
+    <div>영어 : <span class="eng">0</span>점</div>
+
+    <div class="box">
+        <ul class="score"></ul>
+    </div>
+    
+    <script>
+        let chae = [80,90,80,50]
+        let img = ["img1.jpg", "img2.jpg","img3.jpg","img4.jpg","img5.jpg"]
+        document.querySelector(".kor").innerHTML = chae[0]
+        document.querySelector(".math").innerHTML = chae[1]
+        document.querySelector(".eng").innerHTML = chae[2]
+
+        let score = "";
+        for(let i=0;i<img.length;i++){
+            // score += "<li>" + chae[i] + "</li>";
+            // score += "<li><img src ='../../images/" + img[i] + "'></li>";
+            score += `<li><img src="../../images/ ${img[i]}"></li>`
+        }
+
+        console.log(score)
+        document.querySelector(".score").innerHTML = score;
+    </script>
+</body>
+</html>

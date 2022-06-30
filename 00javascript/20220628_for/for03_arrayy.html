@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="box">
+        <ul class="score"></ul>
+    </div>
+    <script>
+        
+        let img = ["img1","img2","img3","img4","img5","img6"]
+
+        let score = "";
+        for(let i=0;i<img.length;i++){
+            // score += "<li><img src='../../images/" + img[i]+ ".jpg" + "'></li>"
+            score += `<li><img src="../../images/${img[i]}.jpg"></li>`
+        }
+
+        document.querySelector(".score").innerHTML = score;
+    </script>
+
+    <li><img src="" alt=""></li>    
+</body>
+</html>
