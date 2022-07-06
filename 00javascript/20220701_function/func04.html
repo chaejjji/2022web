@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div>
+        성명 : <span class="name">홍길동</span>,
+        나이 : <span class="ageCount">00</span>살
+        원나이 : <span class="age"></span>
+    </div>
+
+    <button onclick="insertName('야나두',20,2)">야나두</button>
+    <button onclick="insertName('야나두1',21,2)">야나두</button>
+    <button onclick="insertName('야나두2',22,2)">야나두</button>
+    <button onclick="insertName('야나두3',23,2)">야나두</button>
+
+
+    <hr>
+    나의 이름은 <span class="myName">슈퍼맨</span>입니다.
+    <script>
+        const text1 = "test1";
+        const text2 = "test2";
+
+        function print(name){
+            document.write(name)
+        }
+
+        print(text1)
+        print(text2)
+
+        function insertName(name,age,m){
+            let ageCount = age - m;
+            document.querySelector(".name").innerHTML = name;
+            document.querySelector(".ageCount").innerHTML = ageCount;
+            document.querySelector(".age").innerHTML = age;
+        }
+
+        const funName = function(){
+            return name
+        }
+        // const view = fncName('한성용1')
+
+        function fncCount(num1,num2){
+            let minus = num1 - num2;
+            return minus;
+        }
+
+        let view = fncCount(80,60)
+
+        // document.querySelector(".myName").innerHTML = fncName('홍길동');
+        document.querySelector(".myName").innerHTML = view;
+
+        // function insertName(매개변수,매개변수){} 함수 제작
+        // 어디에다 insert할지, dom(=document object model)조작 => 선택자
+        // 선택자.innerHTML로 대입
+    </script>
+</body>
+</html>
