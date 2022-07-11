@@ -1,0 +1,31 @@
+@charset "utf-8";
+/********** css responsive init **********/
+body{background: skyblue;}
+.container{width: 1200px;margin: 0 auto;}
+
+.bg-primary{background: blue;}
+
+
+/********** css responsive **********/
+@media (max-width: 1399px) {
+    body{background: orange;}
+
+}
+
+@media (max-width: 1199px) {
+
+}
+
+@media (max-width: 991px) {
+
+}
+
+@media (max-width: 767px) {
+    body{background: gold;}
+    .container{width: 100%;}
+
+}
+
+@media (max-width: 575px) {
+
+}
