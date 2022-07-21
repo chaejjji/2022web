@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>acco02</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+
+        .menuWrap{width: 300px;}
+        .menu>li>a{display: flex;height: 50px;justify-content: center;align-items: center;
+            background: #eee;
+        }
+        .submenu{display: none;background: #aaa;}
+        .submenu li{display: flex;justify-content: center;align-items: center;padding:10px 16px;}
+
+        .menu>li>a i{transition:.3s;}
+        .menu>li>a.active i{transform:rotate(180deg)}
+        
+
+
+
+        /* .submenu{display:none;} */
+    </style>
+</head>
+<body>
+
+    <div class="menuWrap">
+        <ul class="menu">
+
+            <li><a href="#">menu01&nbsp&nbsp<i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">sub01_01</a></li>
+                    <li><a href="#">sub01_02</a></li>
+                    <li><a href="#">sub01_03</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">menu02&nbsp&nbsp<i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">sub02_01</a></li>
+                    <li><a href="#">sub02_02</a></li>
+                    <li><a href="#">sub02_03</a></li>
+                </ul>
+            </li>
+
+            <li><a href="#">menu03&nbsp&nbsp<i class="fa-solid fa-chevron-down"></i></a>
+                <ul class="submenu">
+                    <li><a href="#">sub03_01</a></li>
+                    <li><a href="#">sub03_02</a></li>
+                    <li><a href="#">sub03_03</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        $(".menu>li>a").click(function(e){
+            e.preventDefault();
+
+            $(".menu>li>a").parent().find(".submenu").slideUp();
+            if( $(this).hasClass("active") ){
+                $(".menu>li>a").removeClass("active");
+            }else{
+                $(this).parent().find(".submenu").slideDown();
+                $(".menu>li>a").removeClass("active");
+                $(this).addClass("active");
+            }
+        })
+        
+    </script>
+
+</body>
+</html>
