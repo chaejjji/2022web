@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist03__obj01</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../../css/reset.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <style>
+        .html,body{height: 100%;display: flex;justify-content: center;align-items: center;}
+        .listView{width: 500px;margin: 0 auto;}
+    </style>
+</head>
+<body>
+
+    <ul class="listView">
+
+    </ul>
+
+
+    <script>
+        let listData = [
+            {todo:"오늘의 할일1",done:true},
+            {todo:"오늘의 할일2",done:false},
+            {todo:"오늘의 할일3",done:false},
+            {todo:"오늘의 할일4",done:true},
+            {todo:"오늘의 할일5",done:true},
+        ]
+
+        const listView = document.querySelector(".listView")
+
+        function view(){
+            let viewList = "";
+            listData.forEach(function(item,i){
+                viewList += `<li>`;
+                if (listData[i].done == true){
+                    viewList += `<div class="item active">${listData[i].todo}</div>`
+                }else{
+                    viewList += `<div class="item">${listData[i].todo}</div>`
+                }
+
+                viewList += 
+                            `</li>`
+            })
+        }
+        view();
+    </script>
+
+<div class="iconWrap">
+    <i class="fa-solid fa-trash-can" onclick=""></i>
+    <i class="fa-solid fa-eraser" onclick=""></i>
+    <i class="fa-solid fa-face-smile-horns" onclick=""></i>
+    <i class="fa-solid fa-face-angry-horns" onclick=""></i>
+</div>
+
+</body>
+</html>
